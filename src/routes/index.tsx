@@ -24,8 +24,7 @@ import {
   Baby,
   UserCircle,
 } from "lucide-react";
-import sandraPhoto from "@/assets/sandra-benevento.jpg";
-import heroBridge from "@/assets/hero-bridge.jpg";
+import sandraHero from "@/assets/sandra-benevento-hero.png";
 import logoSandra from "@/assets/logo-sandra.png";
 import {
   WHATSAPP_URL,
@@ -158,13 +157,13 @@ function Header() {
           />
         </a>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-end xl:flex">
-          <div className="flex items-center gap-1 2xl:gap-2">
+        <nav className="hidden min-w-0 flex-1 items-center justify-end lg:flex">
+          <div className="flex items-center gap-1.5 xl:gap-2">
             {NAV_LINKS.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="shrink-0 whitespace-nowrap rounded-full px-2 py-1 text-xs font-semibold text-[color:var(--color-ink)] transition-colors hover:bg-[color:var(--color-lime)]/10 hover:text-[color:var(--color-lime)] 2xl:px-3 2xl:text-sm"
+                className="shrink-0 whitespace-nowrap rounded-full px-2.5 py-1.5 text-sm font-semibold text-[color:var(--color-ink)] transition-colors hover:bg-[color:var(--color-lime)]/10 hover:text-[color:var(--color-lime)] lg:text-[15px] xl:px-3"
               >
                 {l.label}
               </a>
@@ -176,7 +175,7 @@ function Header() {
           </div>
         </nav>
 
-        <div className="flex min-w-0 flex-1 items-center justify-end gap-3 xl:hidden">
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-3 lg:hidden">
           <button
             aria-label="Abrir menu"
             onClick={() => setOpen((v) => !v)}
@@ -188,7 +187,7 @@ function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-[color:var(--color-ink)]/10 bg-[color:var(--color-cream)]/98 backdrop-blur-md xl:hidden">
+        <div className="border-t border-[color:var(--color-ink)]/10 bg-[color:var(--color-cream)]/98 backdrop-blur-md lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4">
             {NAV_LINKS.map((l) => (
               <a
@@ -217,29 +216,29 @@ function Hero() {
   return (
     <section id="inicio" className="relative overflow-hidden bg-[color:var(--color-cream)]">
       <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--color-lime)]/8 via-transparent to-[color:var(--color-sage)]/10" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pt-10 pb-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pt-14 lg:pb-24">
-        <div className="relative z-10">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-5 py-8 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:py-10">
+        <div className="relative z-10 order-2 lg:order-1">
           <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-lime)]/40 bg-[color:var(--color-lime)]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[color:var(--color-ink)]">
             <span className="h-2 w-2 rounded-full bg-[color:var(--color-lime)]" />
             {DOCTOR_TITLE} · {CITY}
           </span>
-          <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-[color:var(--color-ink)] sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="mt-4 font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-[color:var(--color-ink)] sm:text-5xl lg:text-[3.25rem]">
             {DOCTOR_NAME}
           </h1>
-          <p className="mt-3 text-base font-medium text-[color:var(--color-lime)] sm:text-lg">
+          <p className="mt-2 text-base font-medium text-[color:var(--color-lime)] sm:text-lg">
             {PROFESSIONAL_IDENTIFICATION}
           </p>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-[color:var(--color-ink-soft)]/85">
+          <p className="mt-3 max-w-xl text-lg leading-relaxed text-[color:var(--color-ink-soft)]/85">
             {DOCTOR_TAGLINE}. Atendimento presencial em {CITY} — {STATE} e online.
           </p>
-          <blockquote className="mt-6 border-l-4 border-[color:var(--color-warm)] pl-5 font-serif text-base italic leading-relaxed text-[color:var(--color-ink-soft)]/80 sm:text-lg">
+          <blockquote className="mt-4 border-l-4 border-[color:var(--color-warm)] pl-5 font-serif text-base italic leading-relaxed text-[color:var(--color-ink-soft)]/80 sm:text-lg">
             &ldquo;{QUOTE}&rdquo;
           </blockquote>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-3">
             <WhatsAppButton size="lg">Entrar em contato</WhatsAppButton>
             <LinkedInButton size="md" />
           </div>
-          <div className="mt-10 grid grid-cols-3 gap-4 border-l-4 border-[color:var(--color-lime)] pl-5">
+          <div className="mt-6 grid grid-cols-3 gap-4 border-l-4 border-[color:var(--color-lime)] pl-5">
             <div>
               <p className="text-2xl font-extrabold text-[color:var(--color-ink)]">{STAT_YEARS}</p>
               <p className="text-xs uppercase tracking-wider text-[color:var(--color-ink-soft)]/60">Anos de experiência</p>
@@ -255,15 +254,15 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative order-1 lg:order-2">
           <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-[color:var(--color-lime)]/15 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-[color:var(--color-ink)]/5 bg-white shadow-2xl">
+          <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border border-[color:var(--color-ink)]/5 bg-white shadow-2xl lg:max-w-none">
             <img
-              src={heroBridge}
-              alt="Desenvolvimento humano e psicologia"
-              width={1280}
-              height={853}
-              className="aspect-[3/2] w-full object-cover"
+              src={sandraHero}
+              alt={`${DOCTOR_NAME_FULL}, psicóloga em ${CITY}`}
+              width={800}
+              height={800}
+              className="aspect-square w-full object-cover object-center"
             />
           </div>
         </div>
@@ -274,18 +273,18 @@ function Hero() {
 
 function Specialist() {
   return (
-    <section id="psicologa" className="bg-white pb-16 pt-8 lg:pb-28 lg:pt-10">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[auto_1fr] lg:gap-16 lg:px-8">
+    <section id="psicologa" className="bg-white py-10 lg:py-14">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 lg:grid-cols-[auto_1fr] lg:gap-10 lg:px-8">
         <div className="relative mx-auto lg:mx-0">
           <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-[color:var(--color-lime)] to-[color:var(--color-sage)]" />
           <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-white shadow-2xl sm:h-80 sm:w-80 lg:h-96 lg:w-96">
             <img
-              src={sandraPhoto}
+              src={sandraHero}
               alt={`${DOCTOR_NAME_FULL}, psicóloga em ${CITY}`}
-              width={400}
-              height={400}
+              width={800}
+              height={800}
               loading="lazy"
-              className="h-full w-full object-cover object-top"
+              className="h-full w-full object-cover object-center"
             />
           </div>
         </div>
@@ -336,7 +335,7 @@ function Specialist() {
 
 function Formation() {
   return (
-    <section id="formacao" className="bg-[color:var(--color-cream)] pb-16 pt-8 lg:pb-28 lg:pt-10">
+    <section id="formacao" className="bg-[color:var(--color-cream)] py-10 lg:py-14">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--color-ink-soft)]/60">
@@ -350,7 +349,7 @@ function Formation() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {FORMATIONS.map((formation) => (
             <div
               key={formation}
@@ -366,7 +365,7 @@ function Formation() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {PROFESSIONAL_EXPERIENCE.map(({ area, focus, period }) => (
             <div
               key={area}
@@ -395,7 +394,7 @@ function Formation() {
 
 function ServiceAreas() {
   return (
-    <section id="areas" className="bg-white pb-16 pt-8 lg:pb-28 lg:pt-10">
+    <section id="areas" className="bg-white py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--color-ink-soft)]/60">
@@ -410,7 +409,7 @@ function ServiceAreas() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_AREAS.map(({ title, items }, i) => {
             const Icon = AREA_ICONS[i] ?? Compass;
             return (
@@ -439,7 +438,7 @@ function ServiceAreas() {
           })}
         </div>
 
-        <div className="mx-auto mt-12 max-w-2xl rounded-xl border border-[color:var(--color-lime)]/30 bg-[color:var(--color-lime)]/10 px-5 py-4 text-center text-sm text-[color:var(--color-ink)]">
+        <div className="mx-auto mt-8 max-w-2xl rounded-xl border border-[color:var(--color-lime)]/30 bg-[color:var(--color-lime)]/10 px-5 py-4 text-center text-sm text-[color:var(--color-ink)]">
           {CONTENT_DISCLAIMER}
         </div>
         <p className="mx-auto mt-4 max-w-2xl text-center text-xs text-[color:var(--color-ink-soft)]/60">
@@ -452,7 +451,7 @@ function ServiceAreas() {
 
 function Publications() {
   return (
-    <section id="publicacoes" className="bg-[color:var(--color-cream)] pb-16 pt-8 lg:pb-28 lg:pt-10">
+    <section id="publicacoes" className="bg-[color:var(--color-cream)] py-10 lg:py-14">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--color-ink-soft)]/60">
@@ -466,7 +465,7 @@ function Publications() {
             desenvolvimento humano.
           </p>
         </div>
-        <ul className="mt-12 space-y-4">
+        <ul className="mt-8 space-y-3">
           {PUBLICATIONS.map(({ title, outlet, year, url }) => (
             <li key={title}>
               <a
@@ -498,7 +497,7 @@ function Publications() {
 
 function Differentials() {
   return (
-    <section id="diferenciais" className="bg-[color:var(--color-ink)] pb-16 pt-8 lg:pb-28 lg:pt-10">
+    <section id="diferenciais" className="bg-[color:var(--color-ink)] py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--color-lime-soft)]">
@@ -508,7 +507,7 @@ function Differentials() {
             Por que escolher
           </h2>
         </div>
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {DIFFERENTIALS.map(({ title, desc }, i) => {
             const Icon = DIFF_ICONS[i] ?? Target;
             return (
@@ -532,7 +531,7 @@ function Differentials() {
 
 function Contact() {
   return (
-    <section id="contato" className="bg-[color:var(--color-cream)] pb-16 pt-8 lg:pb-28 lg:pt-10">
+    <section id="contato" className="bg-[color:var(--color-cream)] py-10 lg:py-14">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--color-ink-soft)]/60">
@@ -546,7 +545,7 @@ function Contact() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
           <div className="rounded-2xl border border-[color:var(--color-lime)]/15 bg-white p-8">
             <h3 className="flex items-center gap-2 text-lg font-bold text-[color:var(--color-ink)]">
               <MapPin className="h-5 w-5 text-[color:var(--color-lime)]" />
