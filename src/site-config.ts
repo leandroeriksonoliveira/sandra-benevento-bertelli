@@ -1,313 +1,229 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════
  *  CONFIGURAÇÃO DO SITE — Sandra Benevento Bertelli
- *  Psicóloga / Consultora · CRP 06/15604-6
  * ═══════════════════════════════════════════════════════════════════════════
  */
-
-// ─── Identificação Profissional (obrigatório CFP/CEPP) ─────────────────────
-
-export const PSYCHOLOGIST_NAME = "Sandra Benevento Bertelli";
-export const PSYCHOLOGIST_TITLE = "Psicóloga / Consultora";
-export const CRP_REGIONAL = "06";
-export const CRP_NUMBER = "15604-6";
-export const CRP = `CRP ${CRP_REGIONAL}/${CRP_NUMBER}`;
-export const PROFESSIONAL_IDENTITY = `${PSYCHOLOGIST_NAME} — Psicóloga — ${CRP}`;
 
 // ─── Contato ───────────────────────────────────────────────────────────────
 
 export const WHATSAPP_PHONE = "5511991578741";
+
 export const WHATSAPP_DISPLAY = "(11) 99157-8741";
+
+export const PHONE_DISPLAY = "(11) 99157-8741";
+
 export const EMAIL = "sandra@sandrarbeneventto.com.br";
 
 export const WHATSAPP_MESSAGE =
-  "Olá, Sandra. Estou entrando em contato pelo site e gostaria de mais informações sobre o atendimento.";
+  "Olá, Dra. Sandra. Estou entrando em contato pelo site e gostaria de mais informações sobre atendimento.";
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export const LINKEDIN_URL =
   "https://br.linkedin.com/in/sandra-benevento-bertelli-58446329";
 
-// ─── Endereço ──────────────────────────────────────────────────────────────
+export const PRIVACY_EMAIL = EMAIL;
+
+// ─── Consultório e profissional ─────────────────────────────────────────────
+
+export const CLINIC_NAME = "Sandra Benevento Bertelli — Psicologia";
+export const DOCTOR_NAME = "Dra. Sandra Benevento Bertelli";
+export const DOCTOR_NAME_FULL = "Sandra Benevento Bertelli";
+export const DOCTOR_TITLE = "Psicóloga / Consultora";
+/** Formato CFP: Psicólogo(a), Nome, CRP-XX/XXXXX */
+export const CRP = "CRP-06/15604-6";
+export const PROFESSIONAL_IDENTIFICATION = `Psicóloga, ${DOCTOR_NAME_FULL}, ${CRP}`;
+export const DOCTOR_TAGLINE =
+  "Psicoterapia · Orientação Vocacional · Musicoterapia · Psicologia Organizacional";
+export const CITY = "São Caetano do Sul";
+export const NEIGHBORHOOD = "Barcelona";
+export const STATE = "SP";
+
+export const UNIVERSITY =
+  "Doutora em Psicologia Escolar e do Desenvolvimento Humano pelo IPUSP/USP";
+
+/** Formações complementares — não confundir com especialidades reconhecidas pelo CFP */
+export const FORMATIONS = [
+  "Psicologia Escolar e do Desenvolvimento Humano (Doutorado — IPUSP)",
+  "Psicologia da Saúde (Mestrado — IMES)",
+  "Musicoterapia (Pós-graduação — FMU)",
+  "Avaliação de Personalidade — Rorschach (Sociedade Rorschach de SP)",
+  "Administração em RH (FGV)",
+] as const;
 
 export const ADDRESS_STREET = "Rua Votorantim, 301";
 export const ADDRESS_NEIGHBORHOOD = "Barcelona";
-export const ADDRESS_CITY = "São Caetano do Sul — SP";
+export const ADDRESS_CITY = `${CITY} — ${STATE}`;
 export const ADDRESS_CEP = "09550-300";
-export const ADDRESS_FULL = `${ADDRESS_STREET} — ${ADDRESS_NEIGHBORHOOD} — ${ADDRESS_CITY} · CEP ${ADDRESS_CEP}`;
+export const ADDRESS_FULL = `${ADDRESS_STREET}, ${ADDRESS_NEIGHBORHOOD}, ${ADDRESS_CITY}, CEP ${ADDRESS_CEP}`;
+export const ADDRESS_NOTE = "Atendimento com hora marcada · Presencial e online";
+export const OFFICE_HOURS =
+  "Segunda a sexta, em horário comercial (mediante agendamento prévio)";
 
 export const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Rua+Votorantim+301+Barcelona+São+Caetano+do+Sul+SP";
 
-// ─── Bio ───────────────────────────────────────────────────────────────────
-
-export const TAGLINE =
-  "O verdadeiro Desenvolvimento Humano está em viver de forma intensa cada etapa de nossa vida, buscando analisar plenamente";
-
 export const BIO_PARAGRAPHS = [
-  `Sandra Benevento Bertelli (${CRP}) é psicóloga, consultora e musicoterapeuta com mais de 45 anos de atuação na área da saúde mental, educação e desenvolvimento humano. Sua trajetória alia rigor acadêmico e profunda sensibilidade humana no cuidado de crianças, adolescentes, adultos e idosos.`,
-  "Doutora em Psicologia Escolar e do Desenvolvimento Humano pelo Instituto de Psicologia da USP (IPUSP), com pós-doutorado na mesma instituição, é também Mestre em Psicologia da Saúde pelo Instituto Metodista, especialista em Rorschach pela Sociedade Rorschach de São Paulo e pós-graduada em Musicoterapia pela FMU.",
-  "É autora de publicações de referência na área, incluindo o Jogo das Profissões (Pearson), Universitários em Pontes e O Idoso não quer Pijama. Atuou como professora e orientadora de pós-graduação na UNISA, USCS e UNIFESP. Fundadora da HARMONIA DA MENTE — Especializada em Saúde Mental e Comportamento Organizacional.",
+  `${PROFESSIONAL_IDENTIFICATION} é psicóloga, musicoterapeuta, professora e autora. Doutora em Psicologia Escolar e do Desenvolvimento Humano pelo IPUSP (2007), com pós-doutorado em Psicologia pela USP (2022–2024). Mestre em Psicologia da Saúde pelo Instituto Metodista de Ensino Superior (1987), pós-graduada em Musicoterapia pela FMU e graduada em Psicologia pela Universidade de Santo Amaro (1979).`,
+  "Com mais de 40 anos de experiência, atua em psicoterapia de linha analítica, orientação vocacional e profissional, musicoterapia, psicologia organizacional e avaliação de personalidade. É autora do Jogo das Profissões e de obras como Universitários em Pontes, O Idoso não quer Pijama e Gestão de Pessoas em Administração Hospitalar.",
+  "Atualmente é Head de Psicologia na Gubi Educação, docente e consultora em saúde mental e comportamento organizacional. Sua abordagem integra ciência, experiência clínica e compromisso com o desenvolvimento humano em todas as fases da vida.",
 ] as const;
 
-// ─── Formação Acadêmica ─────────────────────────────────────────────────────
-
-export const EDUCATION = [
+export const PROFESSIONAL_EXPERIENCE = [
   {
-    degree: "Pós-Doutorado em Psicologia",
-    institution: "USP — Universidade de São Paulo",
-    year: "2022 — 2024",
-    icon: "🎓",
+    area: "Psicoterapia Clínica",
+    focus: "Crianças, adolescentes, adultos, casais e famílias",
+    period: "Mais de 40 anos de prática",
   },
   {
-    degree: "Doutorado em Psicologia Escolar e do Desenvolvimento Humano",
-    institution: "IPUSP — Instituto de Psicologia da USP",
-    year: "2002 — 2007",
-    icon: "🎓",
+    area: "Orientação Vocacional e Profissional",
+    focus: "Escolas, universidades e consultório",
+    period: "Autora do Jogo das Profissões",
   },
   {
-    degree: "Mestre em Psicologia da Saúde",
-    institution: "Instituto Metodista de Ensino Superior",
-    year: "1982 — 1987",
-    focus: "Avaliação de Personalidade pelo Rorschach em gestantes",
-    icon: "📜",
+    area: "Psicologia Organizacional",
+    focus: "Empresas, treinamentos e avaliação de potencial",
+    period: "Há mais de 25 anos",
   },
   {
-    degree: "Pós-Graduação em Musicoterapia",
-    institution: "FMU — Centro Universitário das Faculdades Metropolitanas Unidas",
-    year: "2007 — 2008",
-    icon: "🎵",
-  },
-  {
-    degree: "Graduação em Psicologia",
-    institution: "UNISA — Universidade de Santo Amaro",
-    year: "1975 — 1980",
-    icon: "📚",
-  },
-  {
-    degree: "Especialista em Rorschach",
-    institution: "Sociedade Rorschach de São Paulo",
-    year: "Desde 1981",
-    icon: "🔬",
-  },
-  {
-    degree: "Administração em RH",
-    institution: "FGVPEC",
-    year: "2001",
-    icon: "🏢",
-  },
-  {
-    degree: "Instrutora — Skillful Means Management Training",
-    institution: "Skillful Means Center · Berkeley, CA, EUA",
-    year: "2005",
-    icon: "🌐",
+    area: "Docência e Pesquisa",
+    focus: "USP, UNISA, USCS, UNIFESP",
+    period: "Professora e orientadora de pós-graduação",
   },
 ] as const;
 
-// ─── Especialidades / Áreas de Atuação ────────────────────────────────────
-
-export const SPECIALTIES = [
+export const SERVICE_AREAS = [
   {
-    id: "criancas",
     title: "Crianças",
-    icon: "🧸",
-    color: "warm",
-    items: [
-      "Psicodiagnóstico",
-      "Psicoterapia de linha analítica",
-      "Musicoterapia",
-    ],
-    description:
-      "Acolhimento terapêutico para crianças, com abordagem analítica e recursos lúdicos, incluindo a musicoterapia como ferramenta de expressão e desenvolvimento.",
+    items: ["Psicodiagnóstico", "Psicoterapia de linha analítica", "Musicoterapia"],
   },
   {
-    id: "adolescentes",
     title: "Adolescentes",
-    icon: "🌱",
-    color: "brand",
     items: [
-      "Psicoterapia Breve de linha analítica",
-      "Orientação Vocacional e Profissional",
+      "Psicoterapia breve de linha analítica",
+      "Orientação vocacional e profissional",
     ],
-    description:
-      "Suporte psicoterapêutico e orientação vocacional para adolescentes em fase de construção de identidade e escolha profissional.",
   },
   {
-    id: "adultos",
     title: "Adultos",
-    icon: "🧠",
-    color: "lavender",
     items: [
       "Psicoterapia",
-      "Reorientação de Carreira — Coach",
-      "Psicoterapia de Casal",
-      "Psicoterapia Familiar",
+      "Reorientação de carreira",
+      "Psicoterapia de casal",
+      "Psicoterapia familiar",
     ],
-    description:
-      "Atendimento psicoterapêutico individual, de casal e familiar, além de reorientação de carreira para adultos em diferentes momentos da vida.",
   },
   {
-    id: "empresas",
     title: "Empresas",
-    icon: "🏢",
-    color: "warm",
     items: [
-      "Treinamento e Desenvolvimento",
-      "Saúde e Stress do Trabalhador",
-      "Desenvolvimento de Equipes e Liderança",
-      "Avaliação de Potencial",
+      "Treinamento e desenvolvimento",
+      "Saúde e estresse do trabalhador",
+      "Comunicação e liderança",
+      "Avaliação de potencial",
     ],
-    description:
-      "Consultoria organizacional com foco em saúde mental no trabalho, desenvolvimento de lideranças, equipes de alta performance e avaliação de potencial.",
   },
   {
-    id: "idosos",
-    title: "3ª Idade",
-    icon: "🌻",
-    color: "brand",
+    title: "Universidades",
     items: [
-      "Musicoterapia",
-      "Biodança",
-      "Atividades culturais e de atualização",
-      "Workshops de vivências",
+      "Programas de prevenção à evasão universitária",
+      "Aconselhamento psicológico",
     ],
-    description:
-      "Programas especializados para promover envelhecimento ativo, bem-estar emocional e qualidade de vida na terceira idade.",
   },
   {
-    id: "universidades",
-    title: "Educação",
-    icon: "🎓",
-    color: "lavender",
+    title: "Escolas do Ensino Médio",
     items: [
-      "Prevenção e Aconselhamento Psicológico",
-      "Combate à Evasão Universitária",
-      "Orientação Vocacional em Escolas",
-      "Palestras e Workshops",
+      "Gincana com o Jogo das Profissões",
+      "Orientação vocacional e profissional",
+      "Palestras para pais e familiares",
     ],
-    description:
-      "Programas institucionais para universidades e escolas, com foco em orientação profissional, prevenção e acolhimento psicológico estudantil.",
+  },
+  {
+    title: "Terceira Idade",
+    items: [
+      "Musicoterapia e biodança",
+      "Projeto Vivendo a Cultura",
+      "Palestras e workshops de atualização",
+    ],
   },
 ] as const;
-
-// ─── Experiência Profissional ───────────────────────────────────────────────
-
-export const EXPERIENCE = [
-  {
-    role: "Fundadora e Responsável Técnica",
-    org: "HARMONIA DA MENTE — Saúde Mental e Comportamento Organizacional",
-    period: "2020 — Presente",
-  },
-  {
-    role: "Head de Psicologia",
-    org: "Gubi Educação",
-    period: "2021 — Presente",
-  },
-  {
-    role: "Psicóloga",
-    org: "FAUSCS — Fundação da Universidade Municipal de São Caetano do Sul",
-    period: "2022 — Presente",
-  },
-  {
-    role: "Professora Doutora",
-    org: "USCS — Universidade Municipal de São Caetano do Sul",
-    period: "2020 — 2022",
-  },
-  {
-    role: "Orientadora de Pós-Graduação em Gestão Pública",
-    org: "UNIFESP — Universidade Federal de São Paulo",
-    period: "2019",
-  },
-  {
-    role: "Professora Titular de Psicologia e Medicina",
-    org: "UNISA — Universidade de Santo Amaro",
-    period: "2002 — 2015 (13 anos)",
-  },
-] as const;
-
-// ─── Publicações ───────────────────────────────────────────────────────────
 
 export const PUBLICATIONS = [
   {
     title: "Avaliação Psicológica na Área da Personalidade",
-    subtitle: "Testes Gráficos-Projetivos, Projetivos e Projetivos Elaborados",
-    publisher: "Freitas Bastos",
+    outlet: "Freitas Bastos Editora",
     year: "2025",
-    type: "Livro",
-    url: "https://www.storytel.com/br/books/avalia%C3%A7%C3%A3o-psicol%C3%B3gica-na-%C3%A1rea-da-personalidade-testes-gr%C3%A1ficos-projetivos-testes-projetivos-e-testes-projetivos-mais-elaborados-11430396",
+    url: "https://www.storytel.com/br/books/avaliação-psicológica-na-área-da-personalidade-testes-gráficos-projetivos-testes-projetivos-e-testes-projetivos-mais-elaborados-11430396",
+  },
+  {
+    title: "Universitários em Pontes — A problemática da evasão universitária",
+    outlet: "Pearson Editora",
+    year: "Publicação acadêmica",
+    url: LINKEDIN_URL,
   },
   {
     title: "Jogo das Profissões — Manual",
-    subtitle: "Ferramenta lúdica para Orientação Vocacional e Profissional",
-    publisher: "Pearson / Casa do Psicólogo",
-    year: "Publicado",
-    type: "Instrumento",
+    outlet: "Pearson Editora",
+    year: "Ferramenta de orientação vocacional",
     url: "https://www.livrariadopsicologo.com.br/produto/jogo-das-profissoes--manual,ber076.html",
   },
   {
-    title: "Universitários em Pontes",
-    subtitle: "A problemática da evasão no Ensino Superior",
-    publisher: "Pearson",
-    year: "Publicado",
-    type: "Livro",
-  },
-  {
     title: "O Idoso não quer Pijama",
-    subtitle: "Maturidade ativa — envelhecimento com qualidade de vida",
-    publisher: "Qualitymark",
-    year: "2007",
-    type: "Livro",
+    outlet: "Qualitymark Editora",
+    year: "Maturidade ativa e envelhecimento",
+    url: LINKEDIN_URL,
   },
   {
     title: "Gestão de Pessoas em Administração Hospitalar",
-    subtitle: "Cuidado e compaixão no ambiente de saúde",
-    publisher: "Qualitymark",
+    outlet: "Qualitymark Editora",
     year: "2004",
-    type: "Livro",
+    url: LINKEDIN_URL,
   },
 ] as const;
-
-// ─── Diferenciais ─────────────────────────────────────────────────────────
 
 export const DIFFERENTIALS = [
   {
-    title: "Experiência de mais de 45 anos",
-    desc: "Décadas de prática clínica, acadêmica e organizacional, com presença em instituições de referência nacional.",
-    icon: "⭐",
+    title: "Trajetória consolidada",
+    desc: "Mais de 40 anos de atuação em psicologia clínica, organizacional e educacional.",
   },
   {
-    title: "Formação de alto nível",
-    desc: "Doutorado e pós-doutorado pela USP, especialização em Rorschach e musicoterapia — formação multidisciplinar única.",
-    icon: "🎓",
+    title: "Formação de excelência",
+    desc: "Doutorado e pós-doutorado pela USP, com publicações e pesquisa acadêmica.",
   },
   {
-    title: "Abordagem humanizada e integrativa",
-    desc: "Cuidado que une ciência psicológica, música e desenvolvimento humano para um atendimento verdadeiramente acolhedor.",
-    icon: "💚",
+    title: "Autora e criadora",
+    desc: "Criadora do Jogo das Profissões e de obras referência em orientação vocacional.",
   },
   {
-    title: "Autora de referência nacional",
-    desc: "Publicações reconhecidas em orientação vocacional, avaliação de personalidade e saúde do idoso.",
-    icon: "📚",
+    title: "Atendimento integral",
+    desc: "Da infância à terceira idade, do consultório às organizações — cuidado em todas as fases.",
   },
 ] as const;
 
-// ─── Avisos Legais e Conformidade (CFP/CEPP · LGPD) ──────────────────────
-
 export const CONTENT_DISCLAIMER =
-  `O conteúdo deste site é exclusivamente informativo e educativo. Não substitui avaliação psicológica, consulta ou atendimento individualizado. Cada pessoa apresenta necessidades únicas — procure ${PSYCHOLOGIST_NAME}, Psicóloga (${CRP}).`;
+  "Os textos deste site têm caráter exclusivamente informativo e educativo. Não substituem consulta, avaliação ou atendimento psicológico individualizado. Cada pessoa é única — entre em contato para agendar uma avaliação com a psicóloga.";
 
-export const LEGAL_FOOTER_NOTICE =
-  `Publicidade em conformidade com o Código de Ética e Normas para o Exercício Profissional da Psicologia (CEPP/CFP) e Resolução CFP Nº 9/2024. ${PROFESSIONAL_IDENTITY}.`;
+export const ONLINE_THERAPY_NOTICE =
+  "O atendimento online (telepsicologia) segue as diretrizes da Resolução CFP nº 09/2024 sobre o uso de Tecnologias Digitais da Informação e da Comunicação (TDICs) na psicologia, com plataforma segura e sigilo profissional.";
 
-export const PRIVACY_POLICY_PATH = "/politica-de-privacidade";
+export const LEGAL_FOOTER_NOTICE = `Publicidade profissional em conformidade com o Código de Ética Profissional do Psicólogo (CEPP). ${PROFESSIONAL_IDENTIFICATION}.`;
 
-export const OFFICE_HOURS =
-  "Atendimento com hora marcada · Segunda a sexta, em horário comercial";
+export const SCHEDULE_EVALUATION_TITLE = "Entre em contato";
 
-// ─── SEO ──────────────────────────────────────────────────────────────────
+export const SCHEDULE_EVALUATION_TEXT = `Agende uma conversa com ${PROFESSIONAL_IDENTIFICATION} pelo WhatsApp ou e-mail. A profissional irá compreender sua necessidade e indicar o melhor caminho de atendimento.`;
 
-export const SITE_TITLE = `${PSYCHOLOGIST_NAME} | Psicóloga · ${CRP}`;
+export const QUOTE =
+  "O verdadeiro Desenvolvimento Humano está em viver de forma intensa cada etapa de nossa vida, buscando analisar plenamente.";
 
-export const SITE_DESCRIPTION =
-  `${PSYCHOLOGIST_NAME} — Psicóloga e Consultora com doutorado pela USP. ${CRP}. Psicoterapia, Orientação Vocacional, Avaliação Psicológica e Musicoterapia em São Caetano do Sul — SP.`;
+export const PRIVACY_POLICY_PATH = "/privacidade";
+
+// ─── SEO ────────────────────────────────────────────────────────────────────
+
+export const SITE_TITLE = `${PROFESSIONAL_IDENTIFICATION} · ${CITY}`;
+
+export const SITE_DESCRIPTION = `${DOCTOR_TAGLINE}. Atendimento psicológico com ${PROFESSIONAL_IDENTIFICATION} em ${CITY} — presencial e online.`;
+
+export const OG_DESCRIPTION = `Atendimento psicológico com ${PROFESSIONAL_IDENTIFICATION}. Psicoterapia, orientação vocacional e consultoria em ${CITY}.`;
+
+export const STAT_YEARS = "40+";
+export const STAT_PUBLICATIONS = "5+";
+export const STAT_AREAS = "7";

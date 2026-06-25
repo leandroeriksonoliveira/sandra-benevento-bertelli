@@ -1,48 +1,78 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
 
-@theme {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+@custom-variant dark (&:is(.dark *));
 
-  --color-brand-50: #f0f7f4;
-  --color-brand-100: #d9ede6;
-  --color-brand-200: #b3dccf;
-  --color-brand-300: #82c3ae;
-  --color-brand-400: #56a88e;
-  --color-brand-500: #3d8e76;
-  --color-brand-600: #2e7260;
-  --color-brand-700: #275c4e;
-  --color-brand-800: #224a3f;
-  --color-brand-900: #1e3e35;
-
-  --color-warm-50: #fdf9f5;
-  --color-warm-100: #f9f0e6;
-  --color-warm-200: #f0ddc9;
-  --color-warm-300: #e4c5a3;
-  --color-warm-400: #d5a77a;
-  --color-warm-500: #c68c58;
-  --color-warm-600: #b5784a;
-  --color-warm-700: #97623d;
-  --color-warm-800: #7a5035;
-  --color-warm-900: #63422d;
-
-  --color-lavender-50: #f5f2fb;
-  --color-lavender-100: #ede8f6;
-  --color-lavender-200: #dcd4ee;
-  --color-lavender-300: #c4b8e2;
-  --color-lavender-400: #a998d2;
-  --color-lavender-500: #9179be;
-  --color-lavender-600: #7b60a8;
-  --color-lavender-700: #684f8e;
-  --color-lavender-800: #574474;
-  --color-lavender-900: #483961;
-
-  --color-cream: #fdfaf6;
-  --color-cream-soft: #f7f2ec;
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
 }
 
-* {
-  box-sizing: border-box;
+@theme {
+  --font-sans: "DM Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  /* Paleta aconchegante — lavanda suave e sálvia */
+  --color-lime: #9b8ec4;
+  --color-lime-soft: #c4b8e0;
+  --color-sage: #8fa68e;
+  --color-sage-soft: #d4e4d3;
+  --color-warm: #c9a87c;
+  --color-warm-soft: #e8d5b8;
+  --color-ink: #3d3a36;
+  --color-ink-soft: #6b6560;
+  --color-cream: #fbf9f6;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #128c7e;
+}
+
+:root {
+  --header-height: 5rem;
+  --radius: 0.75rem;
+  --background: oklch(0.99 0.006 80);
+  --foreground: oklch(0.35 0.01 60);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.28 0.02 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.28 0.02 60);
+  --primary: oklch(0.62 0.08 290);
+  --primary-foreground: oklch(0.99 0.006 80);
+  --secondary: oklch(0.96 0.012 80);
+  --secondary-foreground: oklch(0.38 0.01 60);
+  --muted: oklch(0.96 0.01 80);
+  --muted-foreground: oklch(0.52 0.02 60);
+  --accent: oklch(0.78 0.06 290);
+  --accent-foreground: oklch(0.35 0.04 290);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.01 80);
+  --input: oklch(0.92 0.01 80);
+  --ring: oklch(0.62 0.08 290);
 }
 
 html {
@@ -51,46 +81,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-cream);
-  color: #2c3a38;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .font-serif {
   font-family: var(--font-serif);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-cream-soft);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-brand-300);
-  border-radius: 3px;
-}
-
-/* Section fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Focus ring */
-:focus-visible {
-  outline: 2px solid var(--color-brand-500);
-  outline-offset: 2px;
 }

@@ -1,44 +1,44 @@
 # Sandra Benevento Bertelli — Site Institucional
 
-Site institucional para **Sandra Benevento Bertelli**, Psicóloga / Consultora — CRP 06/15604-6.
+Site institucional da **Dra. Sandra Benevento Bertelli**, Psicóloga / Consultora (CRP-06/15604-6).
 
-## Tecnologias
+## Stack
 
-- **React 19** + **TypeScript**
-- **Vite 6** — bundler
-- **Tailwind CSS v4** — estilização
-- **Lucide React** — ícones
-- **React Hook Form** — formulário de contato
+- React 19 + TypeScript
+- TanStack Start (SSR)
+- Tailwind CSS 4
+- Vite 8
+- Deploy: Vercel
 
-## Conformidade
-
-- CFP/CEPP — Código de Ética e Normas para o Exercício Profissional da Psicologia
-- Resolução CFP Nº 9/2024 (TDICs / telepsicologia)
-- LGPD — Lei 13.709/2018
-- Política de Privacidade incluída
-- Banner de cookies
-- Aviso de não substituição de consulta presencial
-- Consentimento explícito nos formulários
-
-## Desenvolvendo localmente
+## Desenvolvimento
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build para produção
+Acesse [http://localhost:8080](http://localhost:8080).
+
+## Build
 
 ```bash
-npm run build
+npm run build:vercel
 ```
 
-## Deploy
+## Conformidade
 
-Configurado para deploy automático no **Vercel** via `vercel.json`.
+O site segue as diretrizes do CEPP/CFP para publicidade profissional de psicólogos:
 
-## Contato do profissional
+- Identificação completa com CRP em todas as páginas
+- Sem depoimentos de pacientes
+- Sem divulgação de preços
+- Sem promessas de resultados
+- Política de Privacidade (LGPD)
+- Banner de consentimento de cookies
+- Aviso de caráter informativo
 
+## Contato
+
+- **Endereço:** Rua Votorantim, 301 — Barcelona — São Caetano do Sul — CEP 09550-300
 - **WhatsApp:** (11) 99157-8741
 - **E-mail:** sandra@sandrarbeneventto.com.br
-- **Endereço:** Rua Votorantim, 301 – Barcelona – São Caetano do Sul – SP · CEP 09550-300
