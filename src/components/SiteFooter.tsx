@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 import logoSandra from "@/assets/logo-sandra.png";
+import { PoweredByVeltro } from "@/components/PoweredByVeltro";
 import {
   ADDRESS_CITY,
   ADDRESS_STREET,
@@ -118,6 +119,7 @@ export function SiteFooter() {
             </p>
             <p>{PROFESSIONAL_IDENTIFICATION}</p>
           </div>
+          <PoweredByVeltro className="pb-5" />
         </div>
       </div>
     </footer>

@@ -11,6 +11,7 @@ import type { ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { CookieConsent } from "../components/CookieConsent";
+import { PoweredByVeltro } from "../components/PoweredByVeltro";
 import { CLINIC_NAME, OG_DESCRIPTION, PROFESSIONAL_IDENTIFICATION, SITE_DESCRIPTION, SITE_TITLE } from "../site-config";
 
 function NotFoundComponent() {
@@ -30,6 +31,7 @@ function NotFoundComponent() {
             Voltar ao início
           </Link>
         </div>
+        <PoweredByVeltro variant="light" className="mt-8" />
       </div>
     </div>
   );
@@ -65,6 +67,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             Voltar ao início
           </a>
         </div>
+        <PoweredByVeltro variant="light" className="mt-8" />
       </div>
     </div>
   );

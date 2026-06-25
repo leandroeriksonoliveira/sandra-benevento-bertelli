@@ -24,6 +24,9 @@ export const LINKEDIN_URL =
 
 export const PRIVACY_EMAIL = EMAIL;
 
+export const VELTRO_DIGITAL_NAME = "Veltro Digital";
+export const VELTRO_DIGITAL_URL = "https://www.veltrodigital.com.br";
+
 // ─── Consultório e profissional ─────────────────────────────────────────────
 
 export const CLINIC_NAME = "Sandra Benevento Bertelli — Psicologia";
