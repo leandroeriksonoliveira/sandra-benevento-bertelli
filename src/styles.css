@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  --color-brand-50: #f0f7f4;
+  --color-brand-100: #d9ede6;
+  --color-brand-200: #b3dccf;
+  --color-brand-300: #82c3ae;
+  --color-brand-400: #56a88e;
+  --color-brand-500: #3d8e76;
+  --color-brand-600: #2e7260;
+  --color-brand-700: #275c4e;
+  --color-brand-800: #224a3f;
+  --color-brand-900: #1e3e35;
+
+  --color-warm-50: #fdf9f5;
+  --color-warm-100: #f9f0e6;
+  --color-warm-200: #f0ddc9;
+  --color-warm-300: #e4c5a3;
+  --color-warm-400: #d5a77a;
+  --color-warm-500: #c68c58;
+  --color-warm-600: #b5784a;
+  --color-warm-700: #97623d;
+  --color-warm-800: #7a5035;
+  --color-warm-900: #63422d;
+
+  --color-lavender-50: #f5f2fb;
+  --color-lavender-100: #ede8f6;
+  --color-lavender-200: #dcd4ee;
+  --color-lavender-300: #c4b8e2;
+  --color-lavender-400: #a998d2;
+  --color-lavender-500: #9179be;
+  --color-lavender-600: #7b60a8;
+  --color-lavender-700: #684f8e;
+  --color-lavender-800: #574474;
+  --color-lavender-900: #483961;
+
+  --color-cream: #fdfaf6;
+  --color-cream-soft: #f7f2ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: #2c3a38;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-soft);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-300);
+  border-radius: 3px;
+}
+
+/* Section fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
